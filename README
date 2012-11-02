@@ -1,0 +1,16 @@
+The beginning of a document reader. This is far from finished and needs lots of
+refactoring.
+
+Requires from CPAN:
+
+* Moo (libmoo-perl)
+* Imager libimager-perl
+
+Source packages:
+
+* MuPDF source (libmupdf-dev)
+
+TODO:
+
+* I had to recompile MuPDF 1.0 to allow for dynamic loading. I will add the
+  patch to this package at a later point.

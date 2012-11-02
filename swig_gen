@@ -1,0 +1,9 @@
+#!/bin/sh
+
+CURDIR=`dirname "$0"`
+cd "$CURDIR"
+
+mkdir -p lib/MuPDF
+#swig -perl5 -outdir . -module MuPDF::SWIG fitz.h
+swig -perl5 -outdir lib/MuPDF -module MuPDF::SWIG mupdf.i
+#perl Makefile.PL
