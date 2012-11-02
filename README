@@ -1,5 +1,4 @@
-The beginning of a document reader. This is far from finished and needs lots of
-refactoring.
+Bindings for MuPDF <http://mupdf.com/>
 
 Requires from CPAN:
 
