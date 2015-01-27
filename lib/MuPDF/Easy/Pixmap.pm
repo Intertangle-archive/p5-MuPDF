@@ -23,10 +23,11 @@ has components => ( is => 'lazy' );
 sub _build_fz_pixmap {
 	my ($self) = @_;
 	my $colorspace;
-	for($self->type) {
-		when('rgb') { $colorspace = $MuPDF::SWIG::fz_device_rgb }
+	if( $self->type eq 'rgb' ) {
+		$colorspace = $MuPDF::SWIG::fz_device_rgb;
+	} else {
 		# TODO turn Str into a type
-		default { croak 'not a colorspace' }
+		croak 'not a colorspace';
 	}
 	my $pixmap = MuPDF::SWIG::fz_new_pixmap_with_bbox(
 		$self->fz_context,
